@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calculator</title>
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<script type="text/javascript" src="assets/js/calculator.js"></script>
+
+<!--WEB APP-->
+<link rel="manifest" href="manifest.json">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#000000"/>
+<!--iOS-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta id="status-bar-meta" name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Calculator">
+
+<!--icons-->
+<link rel="apple-touch-icon" href="touch-icons/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="152x152" href="touch-icons/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="180x180" href="touch-icons/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="167x167" href="touch-icons/touch-icon-ipad-retina.png">
+
+<!--Splash Screens-->
+<link href="splashscreens/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+<link href="splashscreens/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+<link href="splashscreens/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+<link href="splashscreens/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+<link href="splashscreens/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+<link href="splashscreens/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+<link href="splashscreens/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+</head>
+
+<body ontouchstart="">
+	<input class="display" type="text" readonly size="18" id="d">
+	<div class="keys">
+		<button class="button function" onclick="clear_mem();">mc</button>
+		<button class="button function" onclick="recall_mem();">mr</button>
+		<button class="button function" onclick="save_mem();">ms</button>
+		<button class="button operator" onclick="v('/')">/</button>
+		<button class="button number" onclick="v('7')">7</button>
+		<button class="button number" onclick="v('8')">8</button>
+		<button class="button number" onclick="v('9')">9</button>
+		<button class="button operator" onclick="v('*')">*</button>
+		<button class="button number" onclick="v('4')">4</button>
+		<button class="button number" onclick="v('5')">5</button>
+		<button class="button number" onclick="v('6')">6</button>
+		<button class="button operator" onclick="v('-')">-</button>
+		<button class="button number" onclick="v('1')">1</button>
+		<button class="button number" onclick="v('2')">2</button>
+		<button class="button number" onclick="v('3')">3</button>
+		<button class="button operator" onclick="v('+')">+</button>
+		<button class="button number" onclick="v('0')">0</button>
+		<button class="button number" onclick="v('.')">.</button>
+		<button class="button function" onclick="d('')">C</button>
+		<button class="button operator" onclick="e()">=</button>
+	</div>
+<script>
+if ('serviceWorker' in navigator) {
+	window.addEventListener('load', function() {
+		navigator.serviceWorker.register('sw.js').then(function(registration) {
+		// Registration was successful
+		console.log('ServiceWorker registration successful with scope: ', registration.scope);
+	}, function(err) {
+		// registration failed :(
+		console.log('ServiceWorker registration failed: ', err);
+	});
+});
+}
+</script>
+</body>
+</html>
