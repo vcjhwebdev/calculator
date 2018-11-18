@@ -1,7 +1,14 @@
 # Calculator Web App
 
-A simple calculator, built as a Progressive Web App. Playable [here](https://vcjhwebdev.github.io/calculator)!
+A very simple calculator, built as a Progressive Web App. Playable [here](https://vcjhwebdev.github.io/calculator)!
 
 ## Features
 
-- Use localStorage to save memory
+- Uses localStorage to save memory
+
+### Changelog
+
+**Version 1.1.3**
+
+- Make functions into a single object
+- Use localStorage instead of cookies

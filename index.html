@@ -34,26 +34,26 @@
 <body ontouchstart="">
 	<input class="display" type="text" readonly size="18" id="d">
 	<div class="keys">
-		<button class="button function" onclick="clear_mem();">mc</button>
-		<button class="button function" onclick="recall_mem();">mr</button>
-		<button class="button function" onclick="save_mem();">ms</button>
-		<button class="button operator" onclick="v('/')">/</button>
-		<button class="button number" onclick="v('7')">7</button>
-		<button class="button number" onclick="v('8')">8</button>
-		<button class="button number" onclick="v('9')">9</button>
-		<button class="button operator" onclick="v('*')">*</button>
-		<button class="button number" onclick="v('4')">4</button>
-		<button class="button number" onclick="v('5')">5</button>
-		<button class="button number" onclick="v('6')">6</button>
-		<button class="button operator" onclick="v('-')">-</button>
-		<button class="button number" onclick="v('1')">1</button>
-		<button class="button number" onclick="v('2')">2</button>
-		<button class="button number" onclick="v('3')">3</button>
-		<button class="button operator" onclick="v('+')">+</button>
-		<button class="button number" onclick="v('0')">0</button>
-		<button class="button number" onclick="v('.')">.</button>
-		<button class="button function" onclick="d('')">C</button>
-		<button class="button operator" onclick="e()">=</button>
+		<button class="button function" onclick="Calculator.clearMem();">mc</button>
+		<button class="button function" onclick="Calculator.recallMem();">mr</button>
+		<button class="button function" onclick="Calculator.saveMem();">ms</button>
+		<button class="button operator" onclick="Calculator.type('/')">/</button>
+		<button class="button number" onclick="Calculator.type('7')">7</button>
+		<button class="button number" onclick="Calculator.type('8')">8</button>
+		<button class="button number" onclick="Calculator.type('9')">9</button>
+		<button class="button operator" onclick="Calculator.type('*')">×</button>
+		<button class="button number" onclick="Calculator.type('4')">4</button>
+		<button class="button number" onclick="Calculator.type('5')">5</button>
+		<button class="button number" onclick="Calculator.type('6')">6</button>
+		<button class="button operator" onclick="Calculator.type('-')">-</button>
+		<button class="button number" onclick="Calculator.type('1')">1</button>
+		<button class="button number" onclick="Calculator.type('2')">2</button>
+		<button class="button number" onclick="Calculator.type('3')">3</button>
+		<button class="button operator" onclick="Calculator.type('+')">+</button>
+		<button class="button number" onclick="Calculator.type('0')">0</button>
+		<button class="button number" onclick="Calculator.type('.')">.</button>
+		<button class="button function" onclick="Calculator.display('')">C</button>
+		<button class="button operator" onclick="Calculator.e()">=</button>
 	</div>
 <script>
 if ('serviceWorker' in navigator) {
