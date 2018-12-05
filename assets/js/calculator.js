@@ -1,3 +1,16 @@
+function hasLocalStorage() {
+	var testingLS = 'testingLS';
+	try {
+		localStorage.setItem(testingLS, testingLS);
+		localStorage.removeItem(testingLS);
+		return true;
+	}
+	catch (e) {
+		console.log('Sorry, your browser does not support Web Storage...');
+		return false;
+	}
+}
+
 var Calculator = {
 	display: function(val) {
 		// change the display
@@ -20,10 +33,8 @@ var Calculator = {
 		var mem = document.getElementById("d").value;
 
 		// check if browser supports localStorage
-		if (typeof(Storage) !== "undefined") {
-			localStorage.setItem("memory", mem);
-		} else {
-			console.log("Sorry, your browser does not support Web Storage...");
+		if (hasLocalStorage()) {
+			localStorage.setItem("CalculatorData", mem);
 		}
 
 		// temporarily hold what was displayed
@@ -37,8 +48,8 @@ var Calculator = {
 	},
 	recallMem: function() {
 		// check if browser supports localStorage
-		if (typeof(Storage) !== "undefined") {
-			var mem = localStorage.getItem("memory");
+		if (hasLocalStorage()) {
+			var mem = localStorage.getItem("CalculatorData");
 			// check if there was anything stored in memory
 			if(mem != null) {
 				document.getElementById("d").value = mem;
@@ -54,18 +65,14 @@ var Calculator = {
 					document.getElementById("d").value = temp;
 				}, 1000);
 			}
-		} else {
-			console.log("Sorry, your browser does not support Web Storage...");
 		}
 	},
 	clearMem: function() {
 		// check if browser supports localStorage
-		if (typeof(Storage) !== "undefined") {
+		if (hasLocalStorage()) {
 			localStorage.removeItem("memory");
-		} else {
-			console.log("Sorry, your browser does not support Web Storage...");
 		}
-		
+
 		// temporarily hold what was displayed
 		var temp = document.getElementById("d").value;
 		// indicate successfully cleared
