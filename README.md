@@ -8,6 +8,10 @@ A very simple calculator, built as a Progressive Web App. Playable [here](https:
 
 ### Changelog
 
+**Version 1.1.5**
+
+- Fix clear memory
+
 **Version 1.1.4**
 
 - Fix checking if browser supports localStorage

@@ -70,7 +70,7 @@ var Calculator = {
 	clearMem: function() {
 		// check if browser supports localStorage
 		if (hasLocalStorage()) {
-			localStorage.removeItem("memory");
+			localStorage.removeItem("CalculatorData");
 		}
 
 		// temporarily hold what was displayed
